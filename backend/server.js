@@ -12,6 +12,10 @@ const upload = multer({ storage: storage });
 app.use(express.static('public'));
 app.use('/uploads', express.static('uploads'));
 
+// Endpoint to handle image uploads
+app.post('/upload', upload.single('image'), (req, res) => {
+    res.json({ imageUrl: `/uploads/${req.file.filename}` });
+});
 // Configure multer for file uploads
 const storage = multer.diskStorage({
     destination: (req, file, cb) => {
