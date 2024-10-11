@@ -17,4 +17,23 @@ app.use(bodyParser.json());
 app.use(cors());glog();
 const upload = multer({ dest: 'uploads/' });
 
+// In-memory data storage for demonstration purposes
+let users = [];
+
+app.post('/deny', async (req, res) => {
+    const { submissionHash } = req.body;
+    try {
+        const pinnedJSON = await pinata.pinJSONToIPFS({ status: 'denied' }, { pinataMetadata: { name: submissionHash } });
+        res.json({ message: 'Submission denied!', submissionHash: pinnedJSON.IpfsHash });
+    } catch (error) {
+        console.error('Error denying submission:', error);
+        res.status(500).json({ message: 'Error denying submission.' });
+    }
+});
+
+// Start the server
+app.listen(port, () => {
+    console.log(`Server running at http://localhost:${port}`);
+});
+
 
