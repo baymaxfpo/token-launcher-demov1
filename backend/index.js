@@ -41,6 +41,33 @@ app.post('/submit-action', upload.single('proof'), async (req, res) => {
     }
 
     const readableStreamForFile = fs.createReadStream(proofFile.path);
+    const options = {
+        pinataMetadata: {
+            name: proofFile.originalname,
+            keyvalues: {
+                user: userWallet
+            }
+        },
+        pinataOptions: {
+            cidVersion: "1"
+        }
+    };
+
+    try {
+        const fileResult = await pinata.pinFileToIPFS(readableStreamForFile, options);
+        const submission = { userWallet, description, proof: fileResult.IpfsHash, status: 'pending' };
+
+        // Upload submission metadata to IPFS
+        const jsonResult = await pinata.pinJSONToIPFS(submission, options);
+
+        fs.unlinkSync(proofFile.path); // Delete file after uploading to IPFS
+        res.json({ message: 'Submission successful!', submissionHash: jsonResult.IpfsHash });
+    } catch (error) {
+        console.error('Error uploading to IPFS:', error);
+        res.status(500).json({ message: 'Error uploading proof to IPFS.' });
+    }
+});
+
 // Fetch submissions by user address
 app.get('/submissions/:userWallet', async (req, res) => {
     const { userWallet } = req.params;
