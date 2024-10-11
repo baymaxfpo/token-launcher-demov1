@@ -91,4 +91,30 @@ app.get('/submissions/:userWallet', async (req, res) => {
     }
 });
 
+// Approve/Deny endpoints
+app.post('/approve', async (req, res) => {
+    const { submissionHash } = req.body;
+    try {
+        const pinnedJSON = await pinata.pinJSONToIPFS({ status: 'approved' }, { pinataMetadata: { name: submissionHash } });
+        res.json({ message: 'Submission approved!', submissionHash: pinnedJSON.IpfsHash });
+    } catch (error) {
+        console.error('Error approving submission:', error);
+        res.status(500).json({ message: 'Error approving submission.' });
+    }
+});
 
+app.post('/deny', async (req, res) => {
+    const { submissionHash } = req.body;
+    try {
+        const pinnedJSON = await pinata.pinJSONToIPFS({ status: 'denied' }, { pinataMetadata: { name: submissionHash } });
+        res.json({ message: 'Submission denied!', submissionHash: pinnedJSON.IpfsHash });
+    } catch (error) {
+        console.error('Error denying submission:', error);
+        res.status(500).json({ message: 'Error denying submission.' });
+    }
+});
+
+// Start the server
+app.listen(port, () => {
+    console.log(`Server running at http://localhost:${port}`);
+});
