@@ -18,6 +18,12 @@ export default function LandingHeader() {
         <div className='w-full fixed top-0 z-20'>
             <div className='px-5 md:px-[100px] py-4 md:py-6 bg-secondary-200 flex flex-col items-center justify-center w-full '>
                 <div className='max-w-[1440px] w-full flex justify-between items-center'>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+                    
+=======
+>>>>>>> 1d32432 (Refactorinig)
                     <Link href='/'>
                     <Image
                         src='/icons/logo.png'
@@ -26,6 +32,10 @@ export default function LandingHeader() {
                         height={39}
                     />
                     </Link>
+<<<<<<< HEAD
+=======
+>>>>>>> origin
+>>>>>>> 1d32432 (Refactorinig)
                     <div className='hidden md:flex text-xs lg:text-sm xl:text-base items-center text-[white] font-semibold'>
                         <Link href='/create-token' className={` ${pathName == '/create-token' && 'text-primary-200'} py-2 px-2 xl:px-4 hover:text-primary-200`}>
                             Create Token
@@ -36,6 +46,15 @@ export default function LandingHeader() {
                         <Link href='/' className={` ${pathName == '/hot-token' && 'text-primary-200'} py-2 px-2 xl:px-4 hover:text-primary-200`}>
                             Hot Tokens
                         </Link>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+                    </div>
+                    {
+                        (
+                            <div className='flex items-center gap-2 lg:gap-4'>
+=======
+>>>>>>> 1d32432 (Refactorinig)
                         <Link href='/faq' className={` ${pathName == '/faq' && 'text-primary-200'} py-2 px-2 xl:px-4 hover:text-primary-200`}>
                             FAQ
                         </Link>
@@ -80,6 +99,10 @@ export default function LandingHeader() {
                                         />
                                     </Link>
                                 </div>
+<<<<<<< HEAD
+=======
+>>>>>>> origin
+>>>>>>> 1d32432 (Refactorinig)
                                 <Image
                                     src='/icons/UK.svg'
                                     alt='uk'

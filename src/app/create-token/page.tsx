@@ -18,9 +18,14 @@ import { revokeFreezeAuthority } from '@/contexts/revokeFreezeAuthority';
 import { createLiquidity } from '@/contexts/createLiquidity';
 import { burnToken } from '@/contexts/burnToken';
 import { ASSOCIATED_TOKEN_PROGRAM_ID, TOKEN_PROGRAM_ID, Token } from '@solana/spl-token';
+<<<<<<< HEAD
 import { Snackbar } from '@mui/material'
 import { Alert } from '@mui/lab'
 
+=======
+import { Snackbar } from '@material-ui/core'
+import Alert from '@material-ui/lab/Alert'
+>>>>>>> parent of 38e29e5 (feat/refactor code)
 interface AlertState {
     open: boolean
     message: string
@@ -61,7 +66,11 @@ export default function Home() {
     //     console.log(err);
     //   }
     // };
+<<<<<<< HEAD
     const [step, setStep] = useState(1);
+=======
+    const [step, setStep] = useState(6);
+>>>>>>> parent of 38e29e5 (feat/refactor code)
     const sendLanding = () => {
         router.push('/');
     }

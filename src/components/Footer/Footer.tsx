@@ -5,6 +5,16 @@ import React from 'react'
 export default function Footer() {
     return (
         <>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+            <div>
+            </div>
+        </>
+    )
+}
+=======
+>>>>>>> 1d32432 (Refactorinig)
             <div className='w-full px-5 sm:px-[100px] py-6 sm:py-[50px] flex items-start justify-start custom-lg:items-center custom-lg:justify-center bg-secondary-200 '>
                 <div className='w-full max-w-[1440px] flex flex-col gap-6 custom-lg:gap-0 custom-lg:flex-row items-center custom-lg:justify-between text-white font-semibold'>
                     <div className='flex flex-col'>
@@ -170,3 +180,7 @@ export default function Footer() {
         </>
     )
 }
+<<<<<<< HEAD
+=======
+>>>>>>> origin
+>>>>>>> 1d32432 (Refactorinig)

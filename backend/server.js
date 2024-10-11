@@ -6,16 +6,6 @@ const fs = require('fs');
 const app = express();
 const PORT = 3000;
 
-
-const upload = multer({ storage: storage });
-
-app.use(express.static('public'));
-app.use('/uploads', express.static('uploads'));
-
-// Endpoint to handle image uploads
-app.post('/upload', upload.single('image'), (req, res) => {
-    res.json({ imageUrl: `/uploads/${req.file.filename}` });
-});
 // Configure multer for file uploads
 const storage = multer.diskStorage({
     destination: (req, file, cb) => {
@@ -26,6 +16,16 @@ const storage = multer.diskStorage({
         cb(null, uniqueSuffix + path.extname(file.originalname));
     }
 });
+const upload = multer({ storage: storage });
+
+app.use(express.static('public'));
+app.use('/uploads', express.static('uploads'));
+
+// Endpoint to handle image uploads
+app.post('/upload', upload.single('image'), (req, res) => {
+    res.json({ imageUrl: `/uploads/${req.file.filename}` });
+});
+
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
 });

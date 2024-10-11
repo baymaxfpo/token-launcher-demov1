@@ -4,6 +4,11 @@ import React from 'react'
 export default function BannerContent() {
     return (
         <div className='flex flex-col items-center gap-8'>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 1d32432 (Refactorinig)
             <div className='flex flex-col items-center gap-3 px-2'>
                 <div className='text-[24px] md:text-[40px] text-center'>
                     Looking for updates or support?
@@ -42,6 +47,10 @@ export default function BannerContent() {
                 </button>
                 </Link>
             </div>
+<<<<<<< HEAD
+=======
+>>>>>>> origin
+>>>>>>> 1d32432 (Refactorinig)
         </div>
     )
 }

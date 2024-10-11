@@ -25,6 +25,12 @@ export default function Sidebar() {
             </div>
             <div className='flex items-center gap-4'>
                 <div className='flex items-center gap-4'>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+                    
+=======
+>>>>>>> 1d32432 (Refactorinig)
                     <Link href='https://x.com/miragelaunchpad?s=21&t=cy46oI2IX70z78oS7znwTg'>
                         <Image
                             src='/icons/twitter.svg'
@@ -49,6 +55,10 @@ export default function Sidebar() {
                             height={24}
                         />
                     </Link>
+<<<<<<< HEAD
+=======
+>>>>>>> origin
+>>>>>>> 1d32432 (Refactorinig)
                 </div>
                 <Image
                     src='/icons/UK.svg'

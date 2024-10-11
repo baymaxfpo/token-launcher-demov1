@@ -4,6 +4,21 @@ import FaqComp from './FaqComp'
 export default function FaqMain() {
     const tempFaq = [
         {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+            title: 'What is Token Launchpad? ',
+            content: 'Token is a pioneering automatized launchpad for tokens on the Solana ecosystem, create, edit and launch your tokens on a seamless and easy-to-use platform designed by Web3 creators for Web3 creators, no knowledge of coding needed to use Token. '
+        },
+        {
+            title: 'When will I have my token ready? ',
+            content: 'Token is a pioneering automatized launchpad for tokens on the Solana ecosystem, create, edit and launch your tokens on a seamless and easy-to-use platform designed by Web3 creators for Web3 creators, no knowledge of coding needed to use Token. '
+        },
+        {
+            title: 'What benefits do the Token NFTs provide? ',
+            content: 'Token is a pioneering automatized launchpad for tokens on the Solana ecosystem, create, edit and launch your tokens on a seamless and easy-to-use platform designed by Web3 creators for Web3 creators, no knowledge of coding needed to use Token. '
+=======
+>>>>>>> 1d32432 (Refactorinig)
             title: 'What is Mirage Launchpad? ',
             content: 'Mirage is a pioneering automatized launchpad for tokens on the Solana ecosystem, create, edit and launch your tokens on a seamless and easy-to-use platform designed by Web3 creators for Web3 creators, no knowledge of coding needed to use Mirage. '
         },
@@ -14,6 +29,10 @@ export default function FaqMain() {
         {
             title: 'What benefits do the Mirage NFTs provide? ',
             content: 'Mirage is a pioneering automatized launchpad for tokens on the Solana ecosystem, create, edit and launch your tokens on a seamless and easy-to-use platform designed by Web3 creators for Web3 creators, no knowledge of coding needed to use Mirage. '
+<<<<<<< HEAD
+=======
+>>>>>>> origin
+>>>>>>> 1d32432 (Refactorinig)
         },
     ]
     return (

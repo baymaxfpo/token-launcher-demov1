@@ -4,6 +4,13 @@ import Image from 'next/image'
 
 export default function Banner() {
     return (
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+        <div>
+            
+=======
+>>>>>>> 1d32432 (Refactorinig)
         <div className='w-full px-5 md:px-[100px] py-6 md:py-[50px] md:mb-[50px] flex items-center justify-center '>
             <div id = "contact" className='relative w-full max-w-[1440px] py-16 flex flex-col rounded-md overflow-hidden items-center justify-center text-white font-semibold bg-cover bg-center' style={{backgroundImage: 'url("/green_back.png")'}}>
                 <BannerContent />
@@ -16,6 +23,10 @@ export default function Banner() {
                     <img src="/decor/right.png" alt='right_group' className='block lg:hidden' />
                 </div>
             </div>
+<<<<<<< HEAD
+=======
+>>>>>>> origin
+>>>>>>> 1d32432 (Refactorinig)
         </div>
     )
 }

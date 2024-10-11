@@ -6,8 +6,18 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
+<<<<<<< HEAD
   title: "Mirage Launchpad Beta Version",
   description: "Mirage Launchpad Beta Version. Creating an SPL Token on the Solana blockchain. This application allows you to easily create a custom token on Solana",
+=======
+<<<<<<< HEAD
+  title: "Token Launchpad Beta Version",
+  description: "Token Launchpad Beta Version. Creating an SPL Token on the Solana blockchain. This application allows you to easily create a custom token on Solana",
+=======
+  title: "Mirage Launchpad Beta Version",
+  description: "Mirage Launchpad Beta Version. Creating an SPL Token on the Solana blockchain. This application allows you to easily create a custom token on Solana",
+>>>>>>> origin
+>>>>>>> 1d32432 (Refactorinig)
   icons: "https://www.antiersolutions.com/wp-content/uploads/2021/12/solan-min.jpg"
 };
 
