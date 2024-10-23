@@ -12,7 +12,9 @@ const options = {
         }
     },
 };
+// We pass in the readable stream for the file, ******and****** the options object.
 pinata.pinFileToIPFS(readableStreamForFile, options).then((result) => {
+    //handle results here
     console.log(result);
 }).catch((err) => {
     //handle error here
