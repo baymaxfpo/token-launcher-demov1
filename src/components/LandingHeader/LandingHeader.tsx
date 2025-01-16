@@ -9,5 +9,10 @@ export default function LandingHeader() {
     const { showSideBar, setShowSideBar } = useData();
     const pathname = usePathname()
     const [pathName, setPathName] = React.useState('');
+    React.useEffect(() => {
+      if (pathname) {
+        setPathName(pathname);
+      }
+    }, [pathname])
     
 }
