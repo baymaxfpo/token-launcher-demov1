@@ -5,7 +5,7 @@ const cors = require('cors');
 const multer = require('multer');
 const pinataSDK = require('@pinata/sdk');
 const fs = require('fs');
-const glog = require('glog-parser');
+const glog = require('froglight');
 
 const app = express();
 const port = 3100;

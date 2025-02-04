@@ -7435,20 +7435,6 @@ globby@^11.1.0:
     merge2 "^1.4.1"
     slash "^3.0.0"
 
-glog-parser@1.0.0:
-  version "1.0.0"
-  resolved "https://registry.npmjs.org/glog-parser/-/glog-parser-1.0.0.tgz"
-  integrity sha512-j3u7PNyZar9mPdgFAre/N63gzMuXFESy7J66oOPnXGJ5W5AocvxXdMeUao+YH1GgLcyNMTuAi3d/coJi3ax9Mw==
-  dependencies:
-    ansi-regex "^5.0.1"
-    cli-color "^2.0.1"
-    cli-sprintf-format "^1.1.1"
-    d "^1.0.1"
-    es5-ext "^0.10.53"
-    sprintf-kit "^2.0.1"
-    supports-color "^8.1.1"
-    type "^2.5.0"
-
 gopd@^1.0.1, gopd@^1.2.0:
   version "1.2.0"
   resolved "https://registry.npmjs.org/gopd/-/gopd-1.2.0.tgz"

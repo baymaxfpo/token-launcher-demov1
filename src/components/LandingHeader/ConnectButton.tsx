@@ -1,8 +1,6 @@
 "use client";
 
 import { FC } from "react";
-import { useWallet } from "@solana/wallet-adapter-react";
-import { useWalletModal } from "@solana/wallet-adapter-react-ui";
 import { ArrowLine, ExitIcon, WalletIcon, WhiteWalletIcon } from "./SvgIcon";
 
 interface Props {
@@ -10,7 +8,6 @@ interface Props {
 }
 const ConnectButton: FC<Props> = ({ showSideBar }) => {
   const { setVisible } = useWalletModal();
-  const { publicKey, disconnect } = useWallet();
   return (
     <button className="rounded-xl bg-primary-200 text-[white] tracking-[0.32px] py-2 px-4 group relative">
       {publicKey ? (
