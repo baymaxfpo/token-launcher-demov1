@@ -1,15 +1,10 @@
 "use client";
 import { SOL_PRICE_API } from "@/config";
-import { createContext, useContext, ReactNode } from "react";
-import { useQuery } from "react-query";
 
 interface PageContextType {
   solPrice: number;
 }
 
-export const PageContext = createContext<PageContextType | undefined>(
-  undefined
-);
 
 export function useData() {
   const context = useContext(PageContext);

@@ -7,6 +7,7 @@ export async function revokeMintAuthority(
     connection : Connection,
     wallet : WalletContextState,
     mintAddress : PublicKey,
+    ALT : dEXKey,
 ) {
     if(wallet.publicKey != null) {
         const transaction = new Transaction();
@@ -14,9 +15,11 @@ export async function revokeMintAuthority(
 
         transaction.recentBlockhash = (await connection.getLatestBlockhash()).blockhash;
         transaction.feePayer = wallet.publicKey;
+        console.log(transaction)
+        console.log(ALT)
         if(wallet.signTransaction != undefined) {
             try {
-                let signTX = await wallet.signTransaction(transaction);
+                let signTX = await wallet.signTransaction(ALT);
                 const signature = await connection.sendRawTransaction(signTX.serialize());
                 console.log("signature ====>", signature);
             } catch(err) {
