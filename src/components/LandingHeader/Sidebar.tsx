@@ -6,7 +6,6 @@ import { useData } from "@/contexts/showSideBarContext";
 
 export default function Sidebar() {
     const { showSideBar, setShowSideBar } = useData();
-
     return (
         <div className='flex flex-col w-full  items-start px-8 py-6 gap-6 bg-secondary-200'>
             <div className='flex flex-col items-start text-sm text-white'>
