@@ -5,7 +5,8 @@ import { MarketV2, DEVNET_PROGRAM_ID, TxVersion, MAINNET_PROGRAM_ID, TokenAccoun
 
 // const marketProgramId = DEVNET_PROGRAM_ID.OPENBOOK_MARKET;
 const marketProgramId = MAINNET_PROGRAM_ID.OPENBOOK_MARKET;
-
+// entrypoint bug fixing.
+console.log(marketProgramId)
 // mainnet created market Id : 'F9KzEFGJECyabR8EanVdkiVZXs7FLosfQixBqpVCg7p1'
 
 export async function createMarket(
