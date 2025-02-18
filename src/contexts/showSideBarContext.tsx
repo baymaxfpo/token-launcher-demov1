@@ -8,9 +8,7 @@ export const showSideBarContext = createContext({
     setShowSideBar: (fox:boolean) => { }
 });
 
-interface useData {
-  children: ReactNode;
-}
+
 
 export function useData() {
   const context = useContext(showSideBarContext);
