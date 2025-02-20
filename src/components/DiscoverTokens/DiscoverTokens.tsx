@@ -7,9 +7,6 @@ export default function DiscoverTokens() {
     const [totalNumber, setTotalNumber] = React.useState(0);
     const [hottestData, setHottestData] = React.useState<any[]>();
     const [loadMore, setLoadMore] = React.useState(false);
-    const [bannder, setBanderData] = React.useState<any[]>();
-    const [BexMore, setBexMore] = React.useState(false);
-
     const [discoverNumber, setDiscoverNumber] = React.useState(15);
     function getRandomSubarray(arr: any, length: number) {
         const shuffled = arr.slice(0);
