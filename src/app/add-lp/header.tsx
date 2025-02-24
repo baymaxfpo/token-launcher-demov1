@@ -17,7 +17,21 @@ export default function DefaultLp() {
                         Add LP
                     </div>
                 </div>
-                
+                <div className='flex flex-col gap-1'>
+                    <p className="text-sm text-secondary-400">Wallet Address</p>
+                    <div className='p-2 w-full gap-2 flex items-center text-white rounded-xl bg-secondary-300'>
+                        <Image
+                            src="/icons/avatar-image.png"
+                            alt="avatar image"
+                            width={32}
+                            height={32}
+                            className='object-cover object-center w-8 h-8'
+                        />
+                        <p className='truncate w-[90%] text-sm'>
+                            0x8ad129ykba801298t1wopskgdfiyaasdas7gdas532vgd8b6123
+                        </p>
+                    </div>
+                </div>
                 <div className='w-full flex flex-col gap-1'>
                     <p className="text-sm text-secondary-400">
                         Amount
