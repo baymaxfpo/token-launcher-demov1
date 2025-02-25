@@ -1,11 +1,10 @@
 "use client"
 import Image from 'next/image'
 import React from 'react'
-import ReactDom from 'reactDom'
 
 export default function DefaultLp() {
     const [tokenBalance, setTokenBalance] = React.useState(2.5);
-
+    console.log(tokenBalance)
     const handleBalanceChange = (value: string) => {
         setTokenBalance(parseInt(value))
     }
