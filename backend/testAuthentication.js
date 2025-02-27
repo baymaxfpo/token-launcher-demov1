@@ -4,6 +4,7 @@ const pinataSDK = require('@pinata/sdk');
 const pinata = new pinataSDK({ pinataJWTKey: PINATA_JWT_KEY});
 
 const fs = require('fs');
+const conf_vars = require('dotenv').config();
 const readableStreamForFile = fs.createReadStream('./images/Hello-World-Wallpaper.jpg');
 const options = {
     pinataMetadata: {
@@ -18,9 +19,5 @@ const options = {
 };
 // We pass in the readable stream for the file, ******and****** the options object.
 pinata.pinFileToIPFS(readableStreamForFile, options).then((result) => {
-    //handle results here
-    console.log(result);
 }).catch((err) => {
-    //handle error here
-    console.log(err);
 });

