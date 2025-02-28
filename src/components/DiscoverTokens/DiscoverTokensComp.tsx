@@ -3,9 +3,10 @@ import React from 'react'
 interface Props {
     title: string;
     mintedNumber: number;
+    arisedNumber: number;
     imgUrl: string;
 }
-const DiscoverTokensComp: React.FC<Props> = ({ title, mintedNumber, imgUrl }) => {
+const DiscoverTokensComp: React.FC<Props> = ({ title, mintedNumber, arisedNumber, imgUrl }) => {
     return (
         <div className='rounded-xl shadow-md flex flex-col font-semibold grow shrink-0 basis-0 overflow-hidden'>
             <img
@@ -19,6 +20,7 @@ const DiscoverTokensComp: React.FC<Props> = ({ title, mintedNumber, imgUrl }) =>
                 </div>
                 <div className='text-xs text-secondary-400'>
                     {mintedNumber.toFixed(2).toLocaleString()} $USD
+                    {arisedNumber.toFixed(2).toLocaleString()} $USD
                 </div>
             </div>
         </div>
