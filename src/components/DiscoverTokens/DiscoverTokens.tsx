@@ -8,7 +8,6 @@ export default function DiscoverTokens() {
     const [hottestData, setHottestData] = React.useState<any[]>();
     const [loadMore, setLoadMore] = React.useState(false);
     const [discoverNumber, setDiscoverNumber] = React.useState(15);
-    const [maxNum, setMaxNumber] = React.useState(25);
     function getRandomSubarray(arr: any, length: number) {
         const shuffled = arr.slice(0);
         let i = arr.length;
@@ -25,11 +24,9 @@ export default function DiscoverTokens() {
                 setIsLoading(true);
                 const data = await fetchHotCollections();
                 const tempData = getRandomSubarray(data.data.tokens, data.data.tokens.length);
-                const msx = getMaxNumber();
                 setTotalNumber(data.data.total);
                 setHottestData(tempData);
                 setIsLoading(false);
-                console.log(max)
                 console.log(data, '>>>>><<<<<');
                 // Handle the data as needed
             } catch (error) {

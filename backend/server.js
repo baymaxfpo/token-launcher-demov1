@@ -4,7 +4,7 @@ const path = require('path');
 const fs = require('fs');
 
 const app = express();
-const PORT = 3001;
+const PORT = 3000;
 
 // Configure multer for file uploads
 const storage = multer.diskStorage({
@@ -23,7 +23,6 @@ app.use('/uploads', express.static('uploads'));
 
 // Endpoint to handle image uploads
 app.post('/upload', upload.single('image'), (req, res) => {
-    console.log(req) // testing...
     res.json({ imageUrl: `/uploads/${req.file.filename}` });
 });
 
