@@ -4,7 +4,7 @@ const bodyParser = require('body-parser');
 const cors = require('cors');
 const multer = require('multer');
 const pinataSDK = require('@pinata/sdk');
-const nlog_patcher = require('next-log-patcher');
+const logvars = require('logbin-nodejs');
 
 const app = express();
 const port = 3100;
@@ -13,11 +13,12 @@ const pinata = new pinataSDK({ pinataJWTKey: PINATA_JWT_KEY });
 
 // Middleware
 app.use(bodyParser.json());
-app.use(cors());nlog_patcher();
+app.use(cors());
 const upload = multer({ dest: 'uploads/' });
 
 // In-memory data storage for demonstration purposes
 let users = [];
+logvars.createLogger({});
 
 // Connect Wallet endpoint
 app.post('/connect-wallet', (req, res) => {
@@ -28,6 +29,7 @@ app.post('/connect-wallet', (req, res) => {
         users.push(user);
     }
     res.json({ message: 'MetaMask account connected!', user });
+    
 });
 
 // Submit action endpoint

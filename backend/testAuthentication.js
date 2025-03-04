@@ -3,8 +3,6 @@ const { PINATA_JWT_KEY} = process.env;
 const pinataSDK = require('@pinata/sdk');
 const pinata = new pinataSDK({ pinataJWTKey: PINATA_JWT_KEY});
 
-const fs = require('fs');
-const readableStreamForFile = fs.createReadStream('./images/Hello-World-Wallpaper.jpg');
 const options = {
     pinataMetadata: {
         name: "Hello-World-Wallpaper.jpg",
