@@ -15,6 +15,15 @@ export default function MyToken() {
                     <button className='px-6 py-3 text-white bg-primary-200 rounded-xl text-sm  font-semibold mt-8'><span className='text-lg'>+</span> Create Token</button>
                 </div>
             </div>
+            <div className='flex flex-col h-full min-h-full flex-grow  items-center text-white justify-center bg-[red]'>
+                <div className='flex flex-col h-full items-center justify-center'>
+                    <div className='text-xl font-semibold '>Recommendation</div>
+                    <div className='text-primary-900 mt-2'>
+                        Please connect your wallet first.<br /> you can do it...
+                    </div>
+                    <button className='px-6 py-3 text-white bg-primary-200 rounded-xl text-sm  font-semibold mt-8'><span className='text-lg'>+</span> Create Token</button>
+                </div>
+            </div>
         </div>
     )
 }
