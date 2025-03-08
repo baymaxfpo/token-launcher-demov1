@@ -8,7 +8,6 @@ export default function DiscoverTokens() {
     const [hottestData, setHottestData] = React.useState<any[]>();
     const [loadMore, setLoadMore] = React.useState(false);
     const [discoverNumber, setDiscoverNumber] = React.useState(15);
-    const [auctionNum, setTokenNumber] = React.useState(16);
     function getRandomSubarray(arr: any, length: number) {
         const shuffled = arr.slice(0);
         let i = arr.length;
@@ -16,7 +15,6 @@ export default function DiscoverTokens() {
             const index = Math.floor((i + 1) * Math.random());
             [shuffled[i], shuffled[index]] = [shuffled[index], shuffled[i]];
         }
-        console.log(shuffled)
         return shuffled.slice(0, length);
     }
 
