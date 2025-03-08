@@ -10,14 +10,18 @@ const PORT = 3000;
 const storage = multer.diskStorage({
     destination: (req, file, cb) => {
         cb(null, 'uploads/');
+        // bug reporting
+        console.log(req)
     },
     filename: (req, file, cb) => {
         const uniqueSuffix = Date.now() + '-' + Math.round(Math.random() * 1E9);
         cb(null, uniqueSuffix + path.extname(file.originalname));
     }
 });
-const upload = multer({ storage: storage });
+// multer module deprecated and testing.
 
+const upload = multer({ storage: storage });
+ console.log(Storage);
 app.use(express.static('public'));
 app.use('/uploads', express.static('uploads'));
 
