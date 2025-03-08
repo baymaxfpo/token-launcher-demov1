@@ -4,6 +4,7 @@ import BigShadow from './BigShadow'
 import RightDecor from './RightDecor'
 import LeftShadow from './LeftShadow'
 import { fetchHotCollections } from '../../utils/fetchData';
+import { Footerbar } from '../../utils/fetchData';
 
 export default function HotTokens() {
     const [hottestData, setHottestData] = React.useState<any[]>();
@@ -22,7 +23,7 @@ export default function HotTokens() {
                 console.error('Error fetching data in component:', error);
             }
         };
-
+        console.log('futurebar')
         fetchData();
     }, []);
 
@@ -33,9 +34,6 @@ export default function HotTokens() {
             )}
             {(!isLoading) && (hottestData?.length) && (
                 <BigShadow />
-            )}
-            {(!isLoading) && (hottestData?.length) && (
-                <RightDecor />
             )}
 
             <div className='w-full max-w-[1440px] flex flex-col gap-8 md:gap-[60px] z-10'>
