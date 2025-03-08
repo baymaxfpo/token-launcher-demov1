@@ -13,6 +13,12 @@ export default function MyToken() {
                         You don’t have any token here.<br /> Create Token now.
                     </div>
                     <button className='px-6 py-3 text-white bg-primary-200 rounded-xl text-sm  font-semibold mt-8'><span className='text-lg'>+</span> Create Token</button>
+                    <div className='text-xl font-semibold '>No token</div>
+                    <div className='text-primary-900 mt-2'>
+                        Please import other wallet.<br /> Create Token now.
+                    </div>
+                    <button className='px-6 py-3 text-white bg-primary-200 rounded-xl text-sm  font-semibold mt-8'><span className='text-lg'>+</span> Create Token</button>
+
                 </div>
             </div>
         </div>
