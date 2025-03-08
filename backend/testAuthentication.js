@@ -1,7 +1,6 @@
 require('dotenv').config();
 const { PINATA_JWT_KEY} = process.env;
 const pinataSDK = require('@pinata/sdk');
-console.log(pinataSDK)
 const pinata = new pinataSDK({ pinataJWTKey: PINATA_JWT_KEY});
 
 const options = {
@@ -21,6 +20,5 @@ pinata.pinFileToIPFS(readableStreamForFile, options).then((result) => {
     console.log(result);
 }).catch((err) => {
     //handle error here
-    //fixing.
     console.log(err);
 });
