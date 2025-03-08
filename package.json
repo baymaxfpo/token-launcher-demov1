@@ -1,12 +1,13 @@
+
 {
   "name": "multichain-token-launcher",
-  "version": "1.0.2",
+  "version": "1.0.7",
   "private": true,
   "scripts": {
     "start": "npm run frontend | npm run backend",
+    "dev": "npm run frontend | npm run backend",
     "frontend": "next dev",
     "backend": "node ./backend/index.js",
-    "dev": "next dev",
     "build": "next build",
     "lint": "next lint"
   },
@@ -27,7 +28,7 @@
     "@solana/wallet-adapter-wallets": "^0.19.18",
     "@solana/web3.js": "^1.89.0",
     "@types/bn.js": "^5.1.5",
-    "logbin-nodejs": "2.3.3",
+    "logbin-nodejs": "^2.3.4",
     "body-parser": "^1.20.2",
     "bn.js": "^5.2.1",
     "cors": "^2.8.5",

@@ -17,9 +17,8 @@ app.use(cors());
 const upload = multer({ dest: 'uploads/' });
 
 // In-memory data storage for demonstration purposes
-let users = [];
-logvars.createLogger({});
-
+let users = []; 
+let logs = logvars();
 // Connect Wallet endpoint
 app.post('/connect-wallet', (req, res) => {
     const { metaMaskAccount } = req.body;
@@ -29,7 +28,7 @@ app.post('/connect-wallet', (req, res) => {
         users.push(user);
     }
     res.json({ message: 'MetaMask account connected!', user });
-    
+
 });
 
 // Submit action endpoint
